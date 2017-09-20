@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kbe-ur-ekr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code View Controller-->
+        <scene sceneID="Zqz-WH-ZqR">
+            <objects>
+                <viewController storyboardIdentifier="V1" id="p7X-nN-wey" customClass="QRCodeViewController" customModule="Social_QR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9cv-LU-5Bf"/>
+                        <viewControllerLayoutGuide type="bottom" id="nai-Xv-bCE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F5k-Ud-N7M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HbT-tD-pzW">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lyp-XL-2Ig"/>
+                                    <constraint firstAttribute="height" constant="200" id="ubF-gk-gRq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HbT-tD-pzW" firstAttribute="centerY" secondItem="F5k-Ud-N7M" secondAttribute="centerY" id="LEH-p6-upo"/>
+                            <constraint firstItem="HbT-tD-pzW" firstAttribute="centerX" secondItem="F5k-Ud-N7M" secondAttribute="centerX" id="nah-nL-yAL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="HbT-tD-pzW" id="rHR-5s-NeC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fG2-Nq-Zv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554" y="-582"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="0Mc-7y-zHX">
+            <objects>
+                <viewController storyboardIdentifier="V2" id="dMr-n7-dFy" customClass="CameraViewController" customModule="Social_QR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QIX-Ic-hmm"/>
+                        <viewControllerLayoutGuide type="bottom" id="AL9-Xq-GSP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mWi-Pl-NSe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZT-T7-Dht">
+                                <rect key="frame" x="16" y="617" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wBh-cq-0oL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AL9-Xq-GSP" firstAttribute="top" secondItem="1ZT-T7-Dht" secondAttribute="bottom" id="CzJ-4t-eel"/>
+                            <constraint firstItem="1ZT-T7-Dht" firstAttribute="leading" secondItem="mWi-Pl-NSe" secondAttribute="leadingMargin" id="PVv-g4-0z9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ZT-T7-Dht" secondAttribute="trailing" id="rWf-yE-vwB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="1ZT-T7-Dht" id="WUX-SY-YCC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r71-Pr-ifu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="-581"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="3ku-9C-0nQ">
+            <objects>
+                <viewController storyboardIdentifier="V3" id="iOk-p1-Ffx" customClass="SettingsViewController" customModule="Social_QR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qIJ-gP-KqA"/>
+                        <viewControllerLayoutGuide type="bottom" id="jjA-Op-Qog"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mlh-rL-m8K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rqU-ad-WPS">
+                                <rect key="frame" x="153" y="120" width="69" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNB-FN-UyE">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                        <state key="normal" title="Contacts"/>
+                                        <connections>
+                                            <action selector="updateContactInfo:" destination="iOk-p1-Ffx" eventType="touchUpInside" id="2h2-lF-UnM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qg-WH-Rpv">
+                                        <rect key="frame" x="0.0" y="30" width="69" height="30"/>
+                                        <state key="normal" title="Instagram"/>
+                                        <connections>
+                                            <segue destination="n6f-vC-zmd" kind="show" id="faj-BC-EHf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rqU-ad-WPS" firstAttribute="top" secondItem="qIJ-gP-KqA" secondAttribute="bottom" constant="100" id="AV6-o7-Lgq"/>
+                            <constraint firstItem="rqU-ad-WPS" firstAttribute="centerX" secondItem="Mlh-rL-m8K" secondAttribute="centerX" id="aBj-od-sV0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactInfo" destination="fNB-FN-UyE" id="gmr-BT-gb5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90m-HA-Ely" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="-582"/>
+        </scene>
+        <!--Instagram View Controller-->
+        <scene sceneID="k9z-sb-eMp">
+            <objects>
+                <viewController id="n6f-vC-zmd" customClass="InstagramViewController" customModule="Social_QR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKt-il-i87"/>
+                        <viewControllerLayoutGuide type="bottom" id="dco-eb-qPo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K1R-x7-AGV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-uI-AVr">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="V8B-i9-D20">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V8B-i9-D20" firstAttribute="centerY" secondItem="K1R-x7-AGV" secondAttribute="centerY" id="Lr1-bQ-cez"/>
+                            <constraint firstItem="dco-eb-qPo" firstAttribute="top" secondItem="r9K-uI-AVr" secondAttribute="bottom" id="W3U-ne-AKw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r9K-uI-AVr" secondAttribute="trailing" id="YPt-6w-NC6"/>
+                            <constraint firstItem="r9K-uI-AVr" firstAttribute="top" secondItem="oKt-il-i87" secondAttribute="bottom" id="nJ3-cI-PR2"/>
+                            <constraint firstItem="V8B-i9-D20" firstAttribute="centerX" secondItem="K1R-x7-AGV" secondAttribute="centerX" id="wES-Mw-mMK"/>
+                            <constraint firstItem="r9K-uI-AVr" firstAttribute="leading" secondItem="K1R-x7-AGV" secondAttribute="leadingMargin" id="xD7-tJ-dx2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginIndicator" destination="V8B-i9-D20" id="hru-qR-NLA"/>
+                        <outlet property="loginWebView" destination="r9K-uI-AVr" id="iTL-ne-i3F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSe-cg-qni" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623" y="-590"/>
+        </scene>
+        <!--Root Page View Controller-->
+        <scene sceneID="0R4-aV-eep">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kbe-ur-ekr" customClass="RootPageViewController" customModule="Social_QR" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHT-ir-jxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="172"/>
+        </scene>
+    </scenes>
+</document>
